@@ -36,7 +36,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'kiddos/malokai.vim'
 Plugin 'valloric/youcompleteme'
-Plugin 'scrooloose/syntastic'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'DoxygenToolkit.vim'
 
@@ -81,14 +80,14 @@ nmap <F4> :TagbarToggle<CR>
 
 
 "========syntastic========
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 
 "========doxygen========
@@ -108,5 +107,4 @@ let g:DoxygenToolkit_licenseTag="Copyright © YANMAR (SHANDONG) R&D CENTER CO., 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
 
